@@ -1,4 +1,4 @@
-# proyecto2021
+# Proyecto2021
 Estructura de Proyecto Lab de Compu II - 2021
 ## Autores
 * Matias Francisco **Lessio**
