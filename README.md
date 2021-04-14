@@ -1,6 +1,13 @@
 # proyecto2021
 Estructura de Proyecto Lab de Compu II - 2021
-
+## Autores
+* Matias Francisco **Lessio**
+* Santiago Agustin **Riveros Salomon**
+## Descripcion
+| Email Institucional | Autor |
+|-------|-------|
+|2003159@ucc.edu.ar|Matias|
+|2000049@ucc.edu.ar|Santiago|
 ### Requisitos del Primer Parcial
 - [ ] El proyecto debe estar subido al repositorio adecuado "Proyecto2021-ApellidoAlumno1-ApellidoAlumno2"
 - [ ] La página principal debe llamarse index
