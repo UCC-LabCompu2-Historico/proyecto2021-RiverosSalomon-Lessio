@@ -1,5 +1,6 @@
 # Proyecto2021
-Estructura de Proyecto Lab de Compu II - 2021
+* Proyecto Final de Laboratorio de Computación 2021
+* **Tema:** Operaciones Bancarias
 ## Autores
 * Matias Francisco **Lessio**
 * Santiago Agustin **Riveros Salomon**
