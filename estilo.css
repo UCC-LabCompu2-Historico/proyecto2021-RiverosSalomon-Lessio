@@ -1,0 +1,27 @@
+body{
+    text-align: center;
+    font-family: 'Arial', cursive;
+    background:url(Imagenes/fondo.jpg)
+}
+#logo{
+    border-style:outset;
+    width: 70px;
+    float: left;
+    border-radius: 60%;
+}
+.botones_menu{
+    border-style: outset;
+    background-color: #ffffff;
+    padding: 7px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px 50px;
+    cursor: pointer;
+}
+#pie_pag{
+    font-weight: bold;
+    text-align: left;
+    position: absolute;bottom:50px;left:50px;
+}
