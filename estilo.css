@@ -3,6 +3,12 @@ body{
     font-family: 'Arial', cursive;
     background:url(Imagenes/fondo.jpg)
 }
+#pie_pag{
+    color: #ffffff;
+}
+h1{
+    color: #ffffff;
+}
 #logo{
     border-style:outset;
     width: 70px;
