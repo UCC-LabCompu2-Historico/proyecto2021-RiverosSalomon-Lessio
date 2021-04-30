@@ -1,12 +1,10 @@
 body{
     text-align: center;
     font-family: 'Arial', cursive;
-    background:url(Imagenes/fondo.jpg)
+    background:url(Imagenes/fondo.jpg);
+    color:#ffffff;
 }
 #pie_pag{
-    color: #ffffff;
-}
-h1{
     color: #ffffff;
 }
 #logo{
