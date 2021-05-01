@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>UCCB</title>
+    <title>Plazo Fijo</title>
     <meta content="Riveros Salomon,Santiago" name="autor">
     <meta content="Lessio, Matias" name="autor">
     <meta content="Universidad Catolica de Cordoba Bank" name="descripcion">
@@ -32,26 +32,27 @@
         </a>
     </div>
 </nav>
+<section>
+    <form>
+        <p>
+            <select id="option" name="Tipo de Plazo Fijo">
+                <option>Seleccione el tipo de Plazo Fijo</option>
+                <option value="Tradicional">Plazo Fijo Tradicional</option>
+                <option value="UVAs">Plazo Fijo UVAs</option>
+            </select>
+        </p>
 
-<form>
-    <p>
-        <select id="option" name="Tipo de Plazo Fijo">
-            <option>Seleccione el tipo de Plazo Fijo</option>
-            <option value="Tradicional">Plazo Fijo Tradicional</option>
-            <option value="UVAs">Plazo Fijo UVAs</option>
-        </select>
-    </p>
-
-    <p>
-        <input type="text" size="30" name="Inversion" placeholder="Ingrese un el monto que Desea Invertir" id="Inversion">
-    </p>
-    <p>
-        <input type="text" size="30" name="Renovacion" placeholder="Ingrese el Periodo de Renovacion (Dias)" id="Renovacion">
-    </p>
-    <p>
-        <input type="date" id="fecha">
-    </p>
-</form>
+        <p>
+            <input type="text" size="30" name="Inversion" placeholder="Ingrese un el monto que Desea Invertir" id="Inversion">
+        </p>
+        <p>
+            <input type="text" size="30" name="Renovacion" placeholder="Ingrese el Periodo de Renovacion (Dias)" id="Renovacion">
+        </p>
+        <p>
+            <input type="date" id="fecha">
+        </p>
+    </form>
+</section>
 <footer id="pie_pag">
     Contacto:
     <ul>
