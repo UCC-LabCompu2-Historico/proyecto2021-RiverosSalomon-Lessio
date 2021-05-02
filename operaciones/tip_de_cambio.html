@@ -35,14 +35,16 @@
 <section>
     <form>
         <p>
-            <select id="option" name="Operacion">
+            <label for="option1"></label>
+            <select id="option1" name="Operacion">
                 <option>Seleccione una operacion</option>
                 <option value="vender">Vender</option>
                 <option value="comprar">Comprar</option>
             </select>
         </p>
         <p>
-            <select id="option" name="Operacion">
+            <label for="option2"></label>
+            <select id="option2" name="moneda">
                 <option>Seleccione una Moneda</option>
                 <option value="dolar">Dolar</option>
                 <option value="euro">Euro</option>
@@ -50,12 +52,11 @@
             </select>
         </p>
         <p>
-            <input type="text" placeholder="Ingrese el Dinero a Cambiar">
+            <label for="cambio"></label><input type="text" placeholder="Ingrese el Dinero a Cambiar" id="cambio">
+
         </p>
     </form>
 </section>
-
-
 <footer id="pie_pag">
     Contacto:
     <ul>
