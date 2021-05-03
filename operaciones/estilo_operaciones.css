@@ -27,20 +27,13 @@ body {
     margin: 5px 50px;
     cursor: pointer;
     border-radius: 10px;
+    color: #000000;
 }
 
-#pie_pag {
-    font-weight: bold;
-    text-align: left;
-    position: absolute;
-    bottom: 50px;
-    left: 50px;
-}
 #option{
     border-radius: 10px;
     display: block;
     padding: 5px 10px;
-    height: 292px;
     margin: 10px auto;
     min-width: 225px;
     -webkit-appearance: none;
@@ -56,7 +49,6 @@ body {
     border-radius: 10px;
     display: block;
     padding: 5px 10px;
-    height: 292px;
     margin: 10px auto;
     min-width: 225px;
     -webkit-appearance: none;
@@ -72,7 +64,6 @@ body {
     border-radius: 10px;
     display: block;
     padding: 5px 10px;
-    height: 292px;
     margin: 10px auto;
     min-width: 225px;
     -webkit-appearance: none;
@@ -88,7 +79,6 @@ body {
     border-radius: 10px;
     display: block;
     padding: 5px 10px;
-    height: 292px;
     margin: 10px auto;
     min-width: 225px;
     -webkit-appearance: none;
@@ -120,4 +110,25 @@ input[type=text] {
     background-repeat: no-repeat, repeat;
     background-position: right .7em top 50%, 0 0;
     background-size: .65em auto, 100%;
+}
+.botones_atras {
+    border-style: outset;
+    background-color: #a4a2a2;
+    color: #000000;
+    padding: 7px 25px;
+    float: right;
+    text-decoration: #000000;
+    display: inline-block;
+    font-size: 8px;
+    margin: 5px 50px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+footer {
+    font-weight: bold;
+    text-align: left;
+    position: absolute;
+    width: 100%;
+    margin-top: 250px;
+    height: 100px;
 }
