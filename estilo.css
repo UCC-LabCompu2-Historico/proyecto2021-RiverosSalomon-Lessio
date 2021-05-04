@@ -60,6 +60,10 @@ footer{
     height: 100px;
 }
 #Alerta {
-    text-align: center;
     width: 500px;
+}
+table, caption, tr, td, th{
+    border: 1px solid #000000;
+    background-color: #ffffff;
+    color: #ff0000;
 }
