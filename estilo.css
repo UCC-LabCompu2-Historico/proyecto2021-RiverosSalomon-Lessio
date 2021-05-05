@@ -2,7 +2,9 @@ body {
     text-align: center;
     font-family: 'Arial', cursive;
     background: url(Imagenes/fondo.jpg);
+    background-color: #ff0000;
     color: #ffffff;
+
 }
 
 #logo {
