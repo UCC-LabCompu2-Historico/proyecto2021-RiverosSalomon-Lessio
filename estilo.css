@@ -41,6 +41,7 @@ body {
     cursor: pointer;
     border-radius: 10px;
 }
+
 .botones_atras {
     border-style: outset;
     background-color: #a4a2a2;
@@ -54,17 +55,20 @@ body {
     cursor: pointer;
     border-radius: 10px;
 }
-footer{
+
+footer {
     font-weight: bold;
     text-align: left;
-    width: 99%;
+    width: 100%;
     margin-top: 250px;
     height: 100px;
 }
+
 #Alerta {
     width: 500px;
 }
-table, caption, tr, td, th{
+
+table, caption, tr, td, th {
     border: 1px solid #000000;
     background-color: #ffffff;
     color: #ff0000;
