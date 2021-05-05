@@ -44,13 +44,13 @@ body {
 
 .botones_atras {
     border-style: outset;
-    background-color: #a4a2a2;
+    background-color: #ffffff;
     color: #000000;
-    padding: 7px 25px;
+    padding: 10px 30px;
     float: right;
     text-decoration: #000000;
     display: inline-block;
-    font-size: 8px;
+    font-size: 15px;
     margin: 5px 50px;
     cursor: pointer;
     border-radius: 10px;
@@ -65,11 +65,36 @@ footer {
 }
 
 #Alerta {
-    width: 500px;
+    width: 800px;
+    position: relative;
+    top:400px ;
+    right: px;
+    left: ;
+    bottom: ;
 }
 
-table, caption, tr, td, th {
-    border: 1px solid #000000;
-    background-color: #ffffff;
-    color: #ff0000;
+table{
+    background: white;
+    color: #000000;
+    font-weight: bold;
+    position: relative;
+    font-family: Arial;
+    width: 400px;
+    border-collapse: collapse;
+    position: relative;
+    left: 1400px;
+    bottom: 100px;
+
+}
+th, td{
+    border:solid 1px black;
+    padding: 2px;
+}
+thead{
+    background-color: darkred;
+    border-bottom: solid 5px black;
+    color: white;
+}
+tr:nth-child(even){
+    background-color: #b0b0b0;
 }

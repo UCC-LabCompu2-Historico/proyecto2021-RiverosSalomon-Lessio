@@ -72,13 +72,13 @@ input[type=text] {
 
 .botones_atras {
     border-style: outset;
-    background-color: #a4a2a2;
+    background-color: #ffffff;
     color: #000000;
-    padding: 7px 25px;
+    padding: 10px 30px;
     float: right;
     text-decoration: #000000;
     display: inline-block;
-    font-size: 8px;
+    font-size: 15px;
     margin: 5px 50px;
     cursor: pointer;
     border-radius: 10px;
