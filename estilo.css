@@ -108,6 +108,8 @@ ol.sucursal {
     width: 500px;
     position: relative;
     left: 100px;
+    border-style: outset;
+    border-color: #000000;
 }
 
 #edificio {
@@ -116,6 +118,9 @@ ol.sucursal {
     border-color: black;
     border-style: outset;
     margin-top: 20px;
+    border-style: outset;
+    border-color: #000000;
+
 }
 
 article {
@@ -129,6 +134,7 @@ article {
     width: 400px;
     margin: auto;
     overflow: hidden;
+    border-style: outset;
 }
 
 .slider ul {
