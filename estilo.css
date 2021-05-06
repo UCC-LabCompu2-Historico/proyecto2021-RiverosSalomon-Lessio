@@ -106,11 +106,15 @@ ol.sucursal {
     width: 500px;
     position: relative;
     left: 100px;
+    border-style: outset;
+    border-color: #000000;
 }
 
 #edificio {
     width: 500px;
     position: relative;
+    border-style: outset;
+    border-color: #000000;
 }
 
 article {
@@ -121,6 +125,7 @@ article {
     width: 500px;
     margin: auto;
     overflow: hidden;
+    border-style: outset;
 }
 
 .slider ul {
