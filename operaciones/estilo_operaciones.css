@@ -91,3 +91,7 @@ footer {
     margin-top: 250px;
     height: 100px;
 }
+canvas{
+    border-style: outset;
+
+}
