@@ -64,6 +64,7 @@ footer {
     font-weight: bold;
     text-align: left;
     width: 100%;
+    font-size: 20px;
 }
 
 #Alerta {
@@ -115,12 +116,9 @@ ol.sucursal {
 #edificio {
     width: 500px;
     position: relative;
-    border-color: black;
+    border-color: #000000;
     border-style: outset;
     margin-top: 20px;
-    border-style: outset;
-    border-color: #000000;
-
 }
 
 article {
@@ -161,6 +159,7 @@ article {
     position: relative;
     right: 620px;
     bottom: 600px;
+    border-style: outset;
 
 
 }

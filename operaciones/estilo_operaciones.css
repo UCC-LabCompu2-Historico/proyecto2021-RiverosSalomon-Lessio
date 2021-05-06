@@ -90,6 +90,7 @@ footer {
     width: 100%;
     margin-top: 250px;
     height: 100px;
+    font-size: 20px;
 }
 canvas{
     border-style: outset;
