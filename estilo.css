@@ -108,7 +108,7 @@ ol.sucursal {
 }
 
 #mapa {
-    width: 500px;
+    width: 400px;
     position: relative;
     left: 100px;
     border-style: outset;
@@ -128,6 +128,7 @@ article {
     font-size: 20px;
     margin: 20px;
 }
+
 .slider {
     position: relative;
     bottom: 10px;
@@ -162,8 +163,6 @@ article {
     right: 620px;
     bottom: 600px;
     border-style: outset;
-
-
 }
 
 .slider2 ul {
@@ -184,14 +183,25 @@ article {
 }
 
 
-
 @keyframes cambio {
-    0% {margin-left: 0;}
-    30% {margin-left: 0;}
+    0% {
+        margin-left: 0;
+    }
+    30% {
+        margin-left: 0;
+    }
 
-    35% {margin-left: -100%;}
-    70% {margin-left: -100%;}
+    35% {
+        margin-left: -100%;
+    }
+    70% {
+        margin-left: -100%;
+    }
 
-    75% {margin-left: -200%;}
-    100% {margin-left: -200%;}
+    75% {
+        margin-left: -200%;
+    }
+    100% {
+        margin-left: -200%;
+    }
 }
