@@ -2,8 +2,11 @@ body {
     text-align: center;
     font-family: 'Arial', cursive;
     background-image: url(Imagenes/fondo.jpg);
-    background-color: #d00000;
+    background-repeat: no-repeat;
     color: #ffffff;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+
 
 }
 
@@ -37,7 +40,7 @@ body {
     text-decoration: none;
     display: inline-block;
     font-size: 12px;
-    margin: 5px 50px;
+    margin: 6px 50px;
     cursor: pointer;
     border-radius: 10px;
 }
@@ -57,17 +60,16 @@ body {
 }
 
 footer {
+    color: black;
     font-weight: bold;
     text-align: left;
     width: 100%;
-    margin-top: 250px;
-    height: 100px;
 }
 
 #Alerta {
-    width: 800px;
+    width: 750px;
     position: relative;
-    top: 300px;
+    bottom: 300px;
 }
 
 table {
@@ -77,8 +79,8 @@ table {
     position: relative;
     width: 400px;
     border-collapse: collapse;
-    left: 1200px;
-    bottom: 100px;
+    left: 1320px;
+    bottom: 1100px;
 
 }
 
@@ -111,14 +113,20 @@ ol.sucursal {
 #edificio {
     width: 500px;
     position: relative;
+    border-color: black;
+    border-style: outset;
+    margin-top: 20px;
 }
 
 article {
     text-align: justify;
     font-size: 20px;
+    margin: 20px;
 }
 .slider {
-    width: 500px;
+    position: relative;
+    bottom: 10px;
+    width: 400px;
     margin: auto;
     overflow: hidden;
 }
@@ -126,19 +134,50 @@ article {
 .slider ul {
     display: flex;
     padding: 0;
-    width: 500px;
+    width: 400px;
 
-    animation: cambio 21s infinite alternate linear;
+    animation: cambio 13s infinite alternate linear;
 }
 
 .slider li {
-    width: 500px;
+    width: 400px;
     list-style: none;
 }
 
 .slider img {
-    width: 500px;
+    width: 400px;
 }
+
+.slider2 {
+    width: 450px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    right: 620px;
+    bottom: 600px;
+
+
+}
+
+.slider2 ul {
+    display: flex;
+    padding: 0;
+    width: 450px;
+
+    animation: cambio 13s infinite alternate linear;
+}
+
+.slider2 li {
+    width: 450px;
+    list-style: none;
+}
+
+.slider2 img {
+    width: 450px;
+}
+
+
+
 @keyframes cambio {
     0% {margin-left: 0;}
     30% {margin-left: 0;}
