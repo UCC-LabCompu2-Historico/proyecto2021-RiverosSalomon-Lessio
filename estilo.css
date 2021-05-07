@@ -6,8 +6,6 @@ body {
     color: #ffffff;
     background-size: 100% 100%;
     background-attachment: fixed;
-
-
 }
 
 #logo {
@@ -63,10 +61,12 @@ footer {
     font-weight: bold;
     color: #000000;
     text-align: left;
-    width: 100%;
     margin-top: 250px;
     height: 100px;
     font-size: 20px;
+    position: relative;
+
+
 }
 
 #Alerta {
@@ -105,12 +105,16 @@ tr:nth-child(even) {
 ol.sucursal {
     text-align: left;
     font-size: 20px;
+    position: absolute;
+    left: 450px;
+    top: 350px;
 }
 
 #mapa {
     width: 400px;
-    position: relative;
-    left: 100px;
+    position: absolute;
+    left: 900px;
+    bottom: 100px;
     border-style: outset;
     border-color: #000000;
 }
@@ -127,6 +131,7 @@ article {
     text-align: justify;
     font-size: 20px;
     margin: 20px;
+    display:block;
 }
 
 .slider {
@@ -135,14 +140,12 @@ article {
     width: 400px;
     margin: auto;
     overflow: hidden;
-    border-style: outset;
 }
 
 .slider ul {
     display: flex;
     padding: 0;
     width: 400px;
-
     animation: cambio 13s infinite alternate linear;
 }
 
@@ -153,6 +156,8 @@ article {
 
 .slider img {
     width: 400px;
+    display:block;
+    line-height:0;
 }
 
 .slider2 {
@@ -162,7 +167,6 @@ article {
     position: relative;
     right: 620px;
     bottom: 600px;
-    border-style: outset;
 }
 
 .slider2 ul {
@@ -180,6 +184,8 @@ article {
 
 .slider2 img {
     width: 450px;
+    display:block;
+    line-height:0;
 }
 
 
