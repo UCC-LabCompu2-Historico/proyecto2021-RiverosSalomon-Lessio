@@ -85,14 +85,14 @@ input[type=text] {
 }
 
 footer {
-    font-weight: bold;
     color: #000000;
     text-align: left;
-    width: 100%;
-    margin-top: 250px;
     height: 100px;
-    font-size: 20px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
+
 
 canvas {
     border-style: outset;
