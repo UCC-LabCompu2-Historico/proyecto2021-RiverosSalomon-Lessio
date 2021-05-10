@@ -88,7 +88,7 @@ footer {
     color: #000000;
     text-align: left;
     height: 100px;
-    position: absolute;
+    position: relative;
     bottom: 0;
     right: 0;
 }

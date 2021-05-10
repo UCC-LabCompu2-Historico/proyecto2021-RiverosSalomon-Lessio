@@ -60,21 +60,22 @@ body {
     font-weight: bold;
     color: #000000;
     text-align: left;
-    height: 100px;
-    font-size: 15px;
-    position: absolute;
+    height: 120px;
+    font-size: 20px;
+    position: relative;
     bottom: 0;
+    background-color: white;
 }
 #general_footer {
     color: #000000;
     text-align: left;
     height: 100px;
-    position: absolute;
+    position: relative;
     bottom: 0;
     right: 0;
 }
 
-#section_index{
+#parte_index{
     column-count: 3;
     column-gap: 3em;
     width: 90%;
@@ -92,9 +93,7 @@ body {
 }
 
 #Alerta {
-    width: 750px;
-    position: relative;
-    bottom: 300px;
+    width: 800px;
 }
 
 table {
@@ -139,7 +138,7 @@ ol.sucursal {
     margin-top: 20px;
 }
 
-article {
+#Historia {
     text-align: justify;
     font-size: 20px;
     margin: 20px;
@@ -219,4 +218,7 @@ article {
     100% {
         margin-left: -200%;
     }
+}
+canvas {
+    border-style: outset;
 }
