@@ -176,7 +176,7 @@ ol.sucursal {
 }
 
 .slider2 {
-    width: 450px;
+    width: 480px;
     margin: auto;
     overflow: hidden;
 
@@ -186,17 +186,17 @@ ol.sucursal {
 .slider2 ul {
     display: flex;
     padding: 0;
-    width: 450px;
-    animation: cambio 19s infinite alternate linear;
+    width: 480px;
+    animation: cambio 30s infinite alternate linear;
 }
 
 .slider2 li {
-    width: 450px;
+    width: 480px;
     list-style: none;
 }
 
 .slider2 img {
-    width: 450px;
+    width: 480px;
     display: block;
     line-height: 0;
 }
