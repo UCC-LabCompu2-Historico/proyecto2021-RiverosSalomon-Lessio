@@ -59,10 +59,8 @@ body {
 }
 
 #index_footer {
-    background-color: #ffffff;
-    background-image: url("Imagenes/Fondo footer.jpg");
     font-weight: bold;
-    color: #000000;
+    color: #ffffff;
     text-align: left;
     height: 120px;
     font-size: 20px;
