@@ -31,6 +31,12 @@ body {
     color: #000000;
 }
 
+.botones_menu:hover {
+    color: rgb(239, 53, 53) !important;
+    box-shadow: 0 4px 16px rgb(255, 255, 255);
+    transition: all 0.2s ease;
+}
+
 select {
     border-radius: 10px;
     display: block;
@@ -82,6 +88,13 @@ input[type=text] {
     margin: 5px 50px;
     cursor: pointer;
     border-radius: 10px;
+}
+
+.botones_atras:hover {
+    box-shadow: inset 0 0 20px rgb(252, 70, 70), 0 0 20px rgb(255, 116, 116);
+    outline-color: rgba(49, 138, 172, 0);
+    outline-offset: 80px;
+    text-shadow: 1px 1px 6px #fff;
 }
 
 footer {
