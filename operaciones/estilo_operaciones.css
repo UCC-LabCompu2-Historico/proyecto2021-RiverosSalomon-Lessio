@@ -62,7 +62,7 @@ input[type=text] {
     box-sizing: border-box;
 }
 
-#fecha {
+#fecha_P,#fecha_PF {
     font-family: 'Arial', cursive;
     border-radius: 10px;
     display: block;
@@ -77,24 +77,90 @@ input[type=text] {
 }
 
 .botones_atras {
-    border-style: outset;
-    background-color: #ffffff;
-    color: #000000;
-    padding: 10px 30px;
-    float: right;
-    text-decoration: #000000;
+    position: relative;
     display: inline-block;
-    font-size: 10px;
+    float: right;
+    padding: 10px 30px;
     margin: 5px 50px;
-    cursor: pointer;
-    border-radius: 10px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 15px;
+    overflow: hidden;
+    transition: 0.2s;
 }
 
 .botones_atras:hover {
-    box-shadow: inset 0 0 20px rgb(252, 70, 70), 0 0 20px rgb(255, 116, 116);
-    outline-color: rgba(49, 138, 172, 0);
-    outline-offset: 80px;
-    text-shadow: 1px 1px 6px #fff;
+    color: #ffffff;
+    background: #f85b5b;
+    box-shadow: 0 0 10px #f66e6e, 0 0 40px #f32121, 0 0 80px #fd4a4a;
+    transition-delay: 1s;
+}
+
+
+.botones_atras span {
+    position: absolute;
+    display: block;
+}
+
+
+.botones_atras span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #f32121);
+}
+
+
+.botones_atras:hover span:nth-child(1) {
+    left: 100%;
+    transition: 1s;
+}
+
+
+.botones_atras span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #f32121);
+}
+
+.botones_atras:hover span:nth-child(3) {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+
+.botones_atras span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #f32121);
+}
+
+.botones_atras:hover span:nth-child(2) {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+.botones_atras span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #f32121);
+}
+
+.botones_atras:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
 }
 
 footer {
