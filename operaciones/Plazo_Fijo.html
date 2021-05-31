@@ -51,14 +51,14 @@
 <section>
     <h2>PLAZOS FIJOS</h2>
     <form>
-        <p>
+        <div class="select">
             <label for="option3"></label>
             <select id="option3" name="Tipo de Plazo Fijo">
-                <option>Seleccione el tipo de Plazo Fijo</option>
-                <option value="Tradicional">Plazo Fijo Tradicional</option>
-                <option value="UVAs">Plazo Fijo UVAs</option>
+                <option  selected disabled>Seleccione el tipo de Plazo Fijo</option>
+                <option value="Tradicional">Plazo Fijo Tradicional en Pesos</option>
+                <option value="UVAs">Plazo Fijo en Dolares</option>
             </select>
-        </p>
+        </div>
         <p>
             <label for="Inversion_PF"></label>
             <input type="text" size="30" name="Inversion" placeholder="Ingrese un el monto que Desea Invertir"
@@ -69,9 +69,9 @@
             <input type="text" size="30" name="Renovacion" placeholder="Ingrese el Periodo de Renovación (Meses)"
                    id="Renovacion_Meses">
         </p>
-        <h4>Fecha de Creación</h4>
+        <h4>MES DE CREACIÓN</h4>
         <p>
-            <label for="fecha_PF"></label><input type="date" id="fecha_PF">
+            <label for="fecha_PF"></label><input type="month" id="fecha_PF">
         </p>
     </form>
     <canvas>
