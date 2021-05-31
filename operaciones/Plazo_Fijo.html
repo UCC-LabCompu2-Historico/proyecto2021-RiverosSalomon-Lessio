@@ -11,10 +11,14 @@
 </head>
 <body>
 <header>
-    <h1>
-        UNIVERSIDAD CATÓLICA DE CÓRDOBA BANK
-    </h1>
-    <img id="logo" src="../Imagenes/Uccb.png" alt="Logo de la pagina">
+    <div class="title">
+        <h1 id="UCCB">
+            UCC BANK
+        </h1>
+    </div>
+    <div>
+        <img id="logo" src="../Imagenes/Uccb.png" alt="Logo de la pagina">
+    </div>
 </header>
 <nav>
     <div>
@@ -48,15 +52,17 @@
         </a>
     </div>
 </nav>
+<div class="animacion">
+    <h2 class="efecto" contenteditable="true">PLAZOS FIJOS</h2>
+</div>
 <section>
-    <h2>PLAZOS FIJOS</h2>
     <form>
         <div class="select">
             <label for="option3"></label>
             <select id="option3" name="Tipo de Plazo Fijo">
                 <option  selected disabled>Seleccione el tipo de Plazo Fijo</option>
                 <option value="Tradicional">Plazo Fijo Tradicional en Pesos</option>
-                <option value="UVAs">Plazo Fijo en Dolares</option>
+                <option value="PF_Dolar">Plazo Fijo en Dolares</option>
             </select>
         </div>
         <p>

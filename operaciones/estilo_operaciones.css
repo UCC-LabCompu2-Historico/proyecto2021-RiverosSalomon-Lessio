@@ -10,11 +10,91 @@ body {
     color: #ffffff;
 }
 
+.title {
+    font-family: "Montserrat", serif;
+    text-align: center;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    letter-spacing: 1px;
+}
+
+#UCCB {
+    background-image: url(https://media.giphy.com/media/VFlFS32MRtV7XzO8KS/giphy.gif);
+    background-color: #de1010;
+    background-size: cover;
+    color: transparent;
+    -webkit-background-clip: text;
+    text-transform: uppercase;
+    font-size: 100px;
+    line-height: 1;
+    margin: 10px 0;
+}
+
 #logo {
     border-style: outset;
     width: 70px;
     float: left;
     border-radius: 60%;
+}
+
+.animacion {
+    margin: 50px auto;
+    width: 100%;
+    max-width: 500px;
+    height: 50px;
+    background-position: center;
+    background-size: 500px 50px;
+    border-radius: 10px;
+    font-family: 'Monserrat', serif;
+    overflow: hidden;
+    text-align: center;
+    vertical-align: middle;
+
+}
+.animacion:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.efecto {
+    display: inline-block;
+    margin: 0;
+    color: rgb(255, 255, 255);
+    font-size: 45px;
+    line-height: 50px;
+    min-width: 50px;
+    outline: none;
+    vertical-align: middle;
+
+    text-shadow:
+            0 3px 20px red,
+            0 0 20px red,
+            0 0 10px orange;
+    animation: 2s efecto infinite alternate linear;
+}
+
+@keyframes efecto {
+    0%   { text-shadow: 0 3px 20px red, 0 0 20px red,
+    0 0 10px orange,
+    0 0 0 yellow;}
+    25%   { text-shadow: 0 3px 20px red, 0 0 30px red,
+    0 0 20px orange,
+    0 0 5px yellow;}
+    50%   { text-shadow: 0 3px 20px red, 0 0 20px red,
+    0 -5px 10px orange,
+    -2px -5px 5px yellow; }
+    75%   { text-shadow: 0 3px 20px red, 0 0 20px red,
+    0 -5px 10px orange,
+    3px -5px 5px yellow;}
+    100%   { text-shadow: 0 3px 20px red, 0 0 20px red,
+    0 0 10px orange,
+    0 0 0 yellow; }
 }
 
 .botones_menu {
@@ -214,6 +294,7 @@ select::-ms-expand {
     overflow: hidden;
     margin: 50px auto;
 }
+
 select {
     flex: 1;
     padding: 0 1em;
