@@ -55,6 +55,7 @@ body {
     vertical-align: middle;
 
 }
+
 .animacion:before {
     content: '';
     display: inline-block;
@@ -72,29 +73,38 @@ body {
     outline: none;
     vertical-align: middle;
 
-    text-shadow:
-            0 3px 20px red,
-            0 0 20px red,
-            0 0 10px orange;
+    text-shadow: 0 3px 20px red,
+    0 0 20px red,
+    0 0 10px orange;
     animation: 2s efecto infinite alternate linear;
 }
 
 @keyframes efecto {
-    0%   { text-shadow: 0 3px 20px red, 0 0 20px red,
-    0 0 10px orange,
-    0 0 0 yellow;}
-    25%   { text-shadow: 0 3px 20px red, 0 0 30px red,
-    0 0 20px orange,
-    0 0 5px yellow;}
-    50%   { text-shadow: 0 3px 20px red, 0 0 20px red,
-    0 -5px 10px orange,
-    -2px -5px 5px yellow; }
-    75%   { text-shadow: 0 3px 20px red, 0 0 20px red,
-    0 -5px 10px orange,
-    3px -5px 5px yellow;}
-    100%   { text-shadow: 0 3px 20px red, 0 0 20px red,
-    0 0 10px orange,
-    0 0 0 yellow; }
+    0% {
+        text-shadow: 0 3px 20px red, 0 0 20px red,
+        0 0 10px orange,
+        0 0 0 yellow;
+    }
+    25% {
+        text-shadow: 0 3px 20px red, 0 0 30px red,
+        0 0 20px orange,
+        0 0 5px yellow;
+    }
+    50% {
+        text-shadow: 0 3px 20px red, 0 0 20px red,
+        0 -5px 10px orange,
+        -2px -5px 5px yellow;
+    }
+    75% {
+        text-shadow: 0 3px 20px red, 0 0 20px red,
+        0 -5px 10px orange,
+        3px -5px 5px yellow;
+    }
+    100% {
+        text-shadow: 0 3px 20px red, 0 0 20px red,
+        0 0 10px orange,
+        0 0 0 yellow;
+    }
 }
 
 .botones_menu {
@@ -320,14 +330,20 @@ select {
     color: #ffffff;
 }
 
-
-input[type=text] {
+input[type=number] {
     padding: 15px 20px;
     margin: 10px auto;
     display: inline-block;
     border: 2px solid #cccccc;
     border-radius: 4px;
     box-sizing: border-box;
+    -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 #fecha_P, #fecha_PF {
@@ -342,6 +358,75 @@ input[type=text] {
     background-repeat: no-repeat;
     background-position: right .7em top 50%, 0 0;
     background-size: .65em auto, 100%;
+}
+
+.boton_calculo {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    min-width: 200px;
+    min-height: 60px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 100;
+    color: #ffffff;
+    background: #d41212;
+    background: linear-gradient(90deg, rgb(184, 22, 22) 0%, rgb(238, 47, 47) 100%);
+    border: none;
+
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+}
+
+button::before {
+    content: '';
+
+    min-width: calc(200px + 12px);
+    min-height: calc(50px + 12px);
+    border: 6px solid #ec2d2d;
+    box-shadow: 0 0 60px rgb(252, 44, 44);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+}
+
+.button:hover, .button:focus {
+    color: #ffffff;
+    transform: translateY(-6px);
+}
+
+button:hover::before, button:focus::before {
+    opacity: 1;
+}
+
+button:hover::after, button:focus::after {
+    animation: none;
+    display: none;
+}
+
+@keyframes ring {
+    0% {
+        width: 30px;
+        height: 30px;
+        opacity: 1;
+    }
+    100% {
+        width: 300px;
+        height: 300px;
+        opacity: 0;
+    }
 }
 
 .botones_atras {

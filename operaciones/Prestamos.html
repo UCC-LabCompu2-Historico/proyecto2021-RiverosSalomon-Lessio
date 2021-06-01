@@ -57,18 +57,27 @@
 </div>
 <section>
     <form>
-        <p>
+        <div>
             <label for="Inversion_P"></label>
-            <input type="text" size="30" name="Inversion" placeholder="Ingrese un el monto a solicitar" id="Inversion_P">
-        </p>
-        <p>
+            <input type="number" size="50" name="Inversion" placeholder="Ingrese un el monto a solicitar" id="Inversion_P" required>
+        </div>
+        <div>
             <label for="Renovacion_Cuotas"></label>
-            <input type="text" size="30" name="Renovacion" placeholder="Ingrese cantidad de cuotas" id="Renovacion_Cuotas">
-        </p>
+            <input type="number" size="50" name="Renovacion" placeholder="Ingrese cantidad de cuotas" id="Renovacion_Cuotas" required>
+        </div>
         <h4>MES DE CREACIÓN</h4>
-        <p>
-            <label for="fecha_P"></label><input type="month" id="fecha_P">
-        </p>
+        <div>
+            <label for="fecha_P"></label><input type="month" id="fecha_P" required>
+        </div>
+        <h4>DINERO A PAGAR</h4>
+        <div>
+            <label for="Total_P"></label><input type="number" id="Total_P" disabled>
+        </div>
+        <div class="boton_calculo">
+            <button type="submit" class="button" onclick="calcularPrestamo()">
+                Calcular
+            </button>
+        </div>
     </form>
     <canvas>
         <!--ANIMACION-->

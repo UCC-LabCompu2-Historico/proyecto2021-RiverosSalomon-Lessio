@@ -59,26 +59,35 @@
     <form>
         <div class="select">
             <label for="option3"></label>
-            <select id="option3" name="Tipo de Plazo Fijo">
-                <option  selected disabled>Seleccione el tipo de Plazo Fijo</option>
-                <option value="Tradicional">Plazo Fijo Tradicional en Pesos</option>
-                <option value="PF_Dolar">Plazo Fijo en Dolares</option>
+            <select id="option3" name="Tipo de Plazo Fijo" required>
+                <option selected disabled>Seleccione el tipo de Plazo Fijo</option>
+                <option value="1">Plazo Fijo Tradicional en Pesos</option>
+                <option value="2">Plazo Fijo en Dolares</option>
             </select>
         </div>
-        <p>
+        <div>
             <label for="Inversion_PF"></label>
-            <input type="text" size="30" name="Inversion" placeholder="Ingrese un el monto que Desea Invertir"
-                   id="Inversion_PF">
-        </p>
-        <p>
+            <input type="number" size="50" name="Inversion" placeholder="Ingrese un el monto que Desea Invertir"
+                   id="Inversion_PF" required>
+        </div>
+        <div>
             <label for="Renovacion_Meses"></label>
-            <input type="text" size="30" name="Renovacion" placeholder="Ingrese el Periodo de Renovación (Meses)"
-                   id="Renovacion_Meses">
-        </p>
+            <input type="number" size="50" name="Renovacion" placeholder="Ingrese el Periodo de Renovación (Meses)"
+                   id="Renovacion_Meses"required>
+        </div>
         <h4>MES DE CREACIÓN</h4>
-        <p>
-            <label for="fecha_PF"></label><input type="month" id="fecha_PF">
-        </p>
+        <div>
+            <label for="fecha_PF"></label><input type="month" id="fecha_PF" required>
+        </div>
+        <h4>DINERO ESTIMADO</h4>
+        <div>
+            <label for="Total_PF"></label><input type="number" id="Total_PF" disabled>
+        </div>
+        <div class="boton_calculo">
+            <button type="submit" class="button" onclick="calcularPlazoFijo()">
+                Calcular
+            </button>
+        </div>
     </form>
     <canvas>
         <!--ANIMACION-->

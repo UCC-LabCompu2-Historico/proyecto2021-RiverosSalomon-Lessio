@@ -58,26 +58,35 @@
 </div>
 <section>
     <form>
-        <p class="select">
+        <div class="select">
             <label for="option1"></label>
-            <select id="option1" name="Operacion">
+            <select id="option1" name="Operacion" required>
                 <option selected disabled>Seleccione una operación</option>
-                <option value="vender" id="vender">Vender</option>
-                <option value="comprar" id="comprar">Comprar</option>
+                <option value="1" id="vender">Vender</option>
+                <option value="2" id="comprar">Comprar</option>
             </select>
-        </p>
-        <p class="select">
+        </div>
+        <div class="select">
             <label for="option2"></label>
-            <select id="option2" name="moneda">
+            <select id="option2" name="moneda" required>
                 <option selected disabled>Seleccione una Moneda</option>
                 <option value="dolar" id="dolar">Dolar</option>
                 <option value="euro" id="euro">Euro</option>
                 <option value="real" id="real">Real</option>
             </select>
-        </p>
-        <p>
-            <label for="cambio"></label><input type="text" placeholder="Ingrese el Dinero a Cambiar" id="cambio" onchange="Cambio()">
-        </p>
+        </div>
+        <div>
+            <label for="cambio"></label><input type="number" size="50" placeholder="Ingrese el Dinero a Cambiar" id="cambio" required>
+        </div>
+        <h4>CONVERSIÓN</h4>
+        <div>
+            <label for="Total_PF"></label><input type="number" id="Total_PF" disabled>
+        </div>
+        <div class="boton_calculo">
+            <button type="submit" class="button" onclick="Cambio()">
+                Calcular
+            </button>
+        </div>
     </form>
     <canvas>
         <!--ANIMACION-->
