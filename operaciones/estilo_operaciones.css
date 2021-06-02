@@ -339,7 +339,7 @@ input::-webkit-inner-spin-button {
     margin: 0;
 }
 
-#fecha_P, #fecha_PF {
+#fecha_P{
     font-family: 'Arial', cursive;
     font-size: 20px;
     border-radius: 10px;
@@ -354,7 +354,7 @@ input::-webkit-inner-spin-button {
     background-size: .65em auto, 100%;
 }
 
-#Total_PF,#Total_P,#Total_Cambio,#Cuotas_P{
+#Total_PF,#Total_P,#Total_Cambio,#Cuotas_P,#Ganancias_PF{
     font-family: 'Arial', cursive;
     background-color: white;
     color: #000000;
@@ -536,4 +536,7 @@ footer {
 
 canvas {
     border-style: outset;
+}
+#Grafico_PF{
+    background-color: #ffffff;
 }

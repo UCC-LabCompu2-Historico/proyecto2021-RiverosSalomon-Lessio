@@ -11,20 +11,20 @@ function Cambio() {
         alert("SE HAN INGRESADOS VALORES NO VÁLIDOS");
     } else if (valor > 0) {
         if (operacion == "vender") {
-            if(moneda=="dolar") {
-                Total=Number(valor)/155;
-            }else if(moneda=="euro"){
-                Total=Number(valor)/185;
-            }else if(moneda=="real"){
-                Total=Number(valor)/20;
+            if (moneda == "dolar") {
+                Total = Number(valor) / 155;
+            } else if (moneda == "euro") {
+                Total = Number(valor) / 185;
+            } else if (moneda == "real") {
+                Total = Number(valor) / 20;
             }
-        }else if (operacion == "comprar") {
-            if(moneda=="dolar") {
-                Total=Number(valor)*150;
-            }else if(moneda=="euro"){
-                Total=Number(valor)*180;
-            }else if(moneda=="real"){
-                Total=Number(valor)*15;
+        } else if (operacion == "comprar") {
+            if (moneda == "dolar") {
+                Total = Number(valor) * 150;
+            } else if (moneda == "euro") {
+                Total = Number(valor) * 180;
+            } else if (moneda == "real") {
+                Total = Number(valor) * 15;
             }
         }
         document.getElementById("Total_Cambio").value = Total.toFixed(2);
@@ -33,6 +33,7 @@ function Cambio() {
 
 /**
  * Calcula el Plazo fijo segun el dinero invertido
+ * Realiza una grafica
  * @method calcularPlazoFijo
  */
 function calcularPlazoFijo() {
@@ -50,11 +51,62 @@ function calcularPlazoFijo() {
     ganancia = (Number(dinero) * Number(porcentaje_Mensual)) / 100;
     Total = Number(dinero) + Number(ganancia);
     Total_Mensual = Number(Total) / Number(renovacion);
-    if (dinero > 0 && renovacion > 0) {
-        document.getElementById("Total_PF").value = Total.toFixed(2);
-    } else if (dinero <= 0 || renovacion <= 0) {
+    if (dinero <= 0 || renovacion <= 0) {
         alert("SE HAN INGRESADOS VALORES NO VÁLIDOS")
+    } else if (dinero > 0 && renovacion > 0) {
+        document.getElementById("Total_PF").value = Total.toFixed(2);
+        document.getElementById("Ganancias_PF").value = ganancia.toFixed(2);
+        var currentdate = new Date();
+        var arrDate = [];
+        var init = currentdate.getMonth() + 1;
+        arrDate.push(init);
+        for (var i = 1; i <= renovacion; i++) {
+            if (init < 12) {
+                arrDate[i] = init + 1;
+                init++;
+            } else {
+                init = 0;
+                arrDate[i] = init + 1;
+                init++;
+            }
+        }
+        var mlist = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+        var arrMonth = [];
+        for (var i = 0; i <= renovacion; i++) {
+            arrMonth.push(mlist[arrDate[i] - 1]);
+        }
+        var arrDinero = [];
+        arrDinero.push(dinero);
+
+        for (var x = 1; x <= renovacion; x++) {
+            var dd = Number(arrDinero[x - 1])
+            arrDinero[x] = dd + Number(Total_Mensual);
+        }
+        crearGrafico(arrMonth, arrDinero);
     }
+}
+
+/**
+ *  Crea un grafico
+ * @method crearGrafico
+ * @param Param1
+ * @param Param2
+ */
+function crearGrafico(param1, param2) {
+    var canvas = document.getElementById("Grafico_PF");
+    var ctx = canvas.getContext("2d");
+    var chart = new Chart(ctx, {
+        type:'line',
+        data: {
+            labels: param1,
+            datasets: [{
+                label: 'GRAFICO DE INVERSION',
+                backgroundColor: 'rgb(255,51,51)',
+                borderColor: 'rgba(3,3,8,0.75)',
+                data: param2
+            }]
+        },
+    });
 }
 
 /**
