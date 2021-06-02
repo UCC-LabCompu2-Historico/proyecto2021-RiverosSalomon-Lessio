@@ -12,19 +12,19 @@ function Cambio() {
     } else if (valor > 0) {
         if (operacion == "vender") {
             if(moneda=="dolar") {
-                Total=Number(valor)/155;
+                Total=Number(valor)*155;
             }else if(moneda=="euro"){
-                Total=Number(valor)/185;
+                Total=Number(valor)*185;
             }else if(moneda=="real"){
-                Total=Number(valor)/20;
+                Total=Number(valor)*20;
             }
         }else if (operacion == "comprar") {
             if(moneda=="dolar") {
-                Total=Number(valor)*150;
+                Total=Number(valor)/150;
             }else if(moneda=="euro"){
-                Total=Number(valor)*180;
+                Total=Number(valor)/180;
             }else if(moneda=="real"){
-                Total=Number(valor)*15;
+                Total=Number(valor)/15;
             }
         }
         document.getElementById("Total_Cambio").value = Total.toFixed(2);
