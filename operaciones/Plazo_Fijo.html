@@ -88,7 +88,7 @@
             <div>
                 <label for="Renovacion_Meses"></label>
                 <input type="number" size="50" name="Renovacion" placeholder="Ingrese el Periodo de Renovación (Meses)"
-                       id="Renovacion_Meses" required onchange="calcularPlazoFijo()">
+                       id="Renovacion_Meses" required>
             </div>
             <h4>MES DE CREACIÓN</h4>
             <div>
@@ -99,7 +99,7 @@
                 <label for="Total_PF"></label><input type="number" id="Total_PF" disabled >
             </div>
             <div class="boton_calculo">
-                <button class="button" >
+                <button  type="button" class="button" onclick="calcularPlazoFijo()">
                     Calcular
                 </button>
             </div>

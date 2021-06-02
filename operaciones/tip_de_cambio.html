@@ -76,14 +76,14 @@
             </select>
         </div>
         <div>
-            <label for="cambio"></label><input type="number" size="50" placeholder="Ingrese el Dinero a Cambiar" id="cambio" required onchange="Cambio()">
+            <label for="cambio"></label><input type="number" size="50" placeholder="Ingrese el Dinero a Cambiar" id="cambio" required>
         </div>
         <h4>CONVERSIÓN</h4>
         <div>
             <label for="Total_Cambio"></label><input type="number" id="Total_Cambio" disabled>
         </div>
         <div class="boton_calculo">
-            <button class="button">
+            <button type="button" class="button" onclick="Cambio()">
                 Calcular
             </button>
         </div>

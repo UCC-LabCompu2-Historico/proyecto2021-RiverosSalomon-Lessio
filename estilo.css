@@ -31,6 +31,7 @@ body {
     font-size: 100px;
     line-height: 1;
     margin: 10px 0;
+    filter: brightness(250%);
 }
 
 #logo {
@@ -513,7 +514,7 @@ ol.sucursal {
     position: relative;
     border-color: #ffffff;
     border-style: outset;
-    margin-top: 20px;
+    margin: 20px;
 }
 
 #Historia, #Tasas {

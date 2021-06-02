@@ -32,6 +32,7 @@ body {
     font-size: 100px;
     line-height: 1;
     margin: 10px 0;
+    filter: brightness(250%);
 }
 
 #logo {
@@ -363,7 +364,7 @@ input::-webkit-inner-spin-button {
     background-size: .65em auto, 100%;
 }
 
-#Total_PF,#Total_P,#Total_Cambio{
+#Total_PF,#Total_P,#Total_Cambio,#Cuotas_P{
     font-family: 'Arial', cursive;
     background-color: white;
     color: #000000;
