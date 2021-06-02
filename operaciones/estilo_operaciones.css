@@ -81,31 +81,21 @@ body {
 }
 
 @keyframes efecto {
-    0% {
-        text-shadow: 0 3px 20px red, 0 0 20px red,
-        0 0 10px orange,
-        0 0 0 yellow;
-    }
-    25% {
-        text-shadow: 0 3px 20px red, 0 0 30px red,
-        0 0 20px orange,
-        0 0 5px yellow;
-    }
-    50% {
-        text-shadow: 0 3px 20px red, 0 0 20px red,
-        0 -5px 10px orange,
-        -2px -5px 5px yellow;
-    }
-    75% {
-        text-shadow: 0 3px 20px red, 0 0 20px red,
-        0 -5px 10px orange,
-        3px -5px 5px yellow;
-    }
-    100% {
-        text-shadow: 0 3px 20px red, 0 0 20px red,
-        0 0 10px orange,
-        0 0 0 yellow;
-    }
+    0%   { text-shadow: 0 3px 20px red, 0 0 20px red,
+    0 0 10px orange,
+    0 0 0 yellow;}
+    25%   { text-shadow: 0 3px 20px red, 0 0 30px red,
+    0 0 10px orange,
+    0 0 5px yellow;}
+    50%   { text-shadow: 0 3px 20px red, 0 0 20px red,
+    0 0 10px orange,
+    0 0 5px yellow; }
+    75%   { text-shadow: 0 3px 20px red, 0 0 20px red,
+    0 0 10px orange,
+    0 0 5px yellow;}
+    100%   { text-shadow: 0 3px 20px red, 0 0 20px red,
+    0 0 10px orange,
+    0 0 5px yellow; }
 }
 
 .botones_menu {
