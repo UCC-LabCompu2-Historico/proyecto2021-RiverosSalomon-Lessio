@@ -5,8 +5,8 @@
 function Cambio() {
     var operacion, moneda, valor, Total;
     valor = document.getElementById("cambio").value;
-    operacion = document.getElementsById("option1").value;
-    moneda = document.getElementsById("option2").value;
+    operacion = document.getElementById("option1").value;
+    moneda = document.getElementById("option2").value;
     if (valor <= 0) {
         alert("SE HAN INGRESADOS VALORES NO VÁLIDOS");
     } else if (valor > 0) {
