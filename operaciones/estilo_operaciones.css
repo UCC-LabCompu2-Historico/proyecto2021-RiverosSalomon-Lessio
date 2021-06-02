@@ -280,6 +280,7 @@ body {
 
 select {
     -webkit-appearance: none;
+    font-size: 20px;
     -moz-appearance: none;
     -ms-appearance: none;
     appearance: none;
@@ -332,6 +333,7 @@ select {
 
 input[type=number] {
     padding: 15px 20px;
+    font-size: 20px;
     margin: 10px auto;
     display: inline-block;
     border: 2px solid #cccccc;
@@ -348,6 +350,7 @@ input::-webkit-inner-spin-button {
 
 #fecha_P, #fecha_PF {
     font-family: 'Arial', cursive;
+    font-size: 20px;
     border-radius: 10px;
     display: block;
     padding: 5px 10px;
@@ -358,6 +361,21 @@ input::-webkit-inner-spin-button {
     background-repeat: no-repeat;
     background-position: right .7em top 50%, 0 0;
     background-size: .65em auto, 100%;
+}
+
+#Total_PF,#Total_P,#Total_Cambio{
+    font-family: 'Arial', cursive;
+    background-color: white;
+    color: #000000;
+    font-size: 20px;
+    text-align: center;
+    padding: 15px 20px;
+    margin: 10px auto;
+    display: inline-block;
+    border: 2px solid #cccccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    -moz-appearance: textfield;
 }
 
 .boton_calculo {
@@ -527,5 +545,4 @@ footer {
 
 canvas {
     border-style: outset;
-
 }

@@ -8,7 +8,21 @@
     <meta content="Universidad Catolica de Cordoba Bank" name="descripcion">
     <link rel="shortcut icon" href="../Imagenes/Uccb.png">
     <link rel="stylesheet" href="estilo_operaciones.css" type="text/css">
-</head>
+
+    <script src="Codigo.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script>window.onload = function () {
+        crearGrafico([], []);
+    };</script></head>
 <body>
 <header>
     <div class="title">
@@ -56,42 +70,45 @@
     <h2 class="efecto" contenteditable="true">PLAZOS FIJOS</h2>
 </div>
 <section>
-    <form>
-        <div class="select">
-            <label for="option3"></label>
-            <select id="option3" name="Tipo de Plazo Fijo" required>
-                <option selected disabled>Seleccione el tipo de Plazo Fijo</option>
-                <option value="1">Plazo Fijo Tradicional en Pesos</option>
-                <option value="2">Plazo Fijo en Dolares</option>
-            </select>
-        </div>
-        <div>
-            <label for="Inversion_PF"></label>
-            <input type="number" size="50" name="Inversion" placeholder="Ingrese un el monto que Desea Invertir"
-                   id="Inversion_PF" required>
-        </div>
-        <div>
-            <label for="Renovacion_Meses"></label>
-            <input type="number" size="50" name="Renovacion" placeholder="Ingrese el Periodo de Renovación (Meses)"
-                   id="Renovacion_Meses"required>
-        </div>
-        <h4>MES DE CREACIÓN</h4>
-        <div>
-            <label for="fecha_PF"></label><input type="month" id="fecha_PF" required>
-        </div>
-        <h4>DINERO ESTIMADO</h4>
-        <div>
-            <label for="Total_PF"></label><input type="number" id="Total_PF" disabled>
-        </div>
-        <div class="boton_calculo">
-            <button type="submit" class="button" onclick="calcularPlazoFijo()">
-                Calcular
-            </button>
-        </div>
-    </form>
-    <canvas>
-        <!--ANIMACION-->
-    </canvas>
+    <div>
+        <form>
+            <div class="select">
+                <label for="option3"></label>
+                <select id="option3" name="Tipo de Plazo Fijo" required>
+                    <option selected disabled>Seleccione el tipo de Plazo Fijo</option>
+                    <option value="PF_Pesos">Plazo Fijo Tradicional en Pesos</option>
+                    <option value="PF_Dolares">Plazo Fijo en Dolares</option>
+                </select>
+            </div>
+            <div>
+                <label for="Inversion_PF"></label>
+                <input type="number" size="50" name="Inversion" placeholder="Ingrese un el monto que Desea Invertir"
+                       id="Inversion_PF" required>
+            </div>
+            <div>
+                <label for="Renovacion_Meses"></label>
+                <input type="number" size="50" name="Renovacion" placeholder="Ingrese el Periodo de Renovación (Meses)"
+                       id="Renovacion_Meses" required onchange="calcularPlazoFijo()">
+            </div>
+            <h4>MES DE CREACIÓN</h4>
+            <div>
+                <label for="fecha_PF"></label><input type="month" id="fecha_PF" required>
+            </div>
+            <h4>DINERO ESTIMADO</h4>
+            <div>
+                <label for="Total_PF"></label><input type="number" id="Total_PF" disabled >
+            </div>
+            <div class="boton_calculo">
+                <button class="button" >
+                    Calcular
+                </button>
+            </div>
+        </form>
+    </div>
+    <div>
+        <canvas id="Grafico_PF"></canvas>
+    </div>
+
 </section>
 <footer>
     <a href="../Operaciones.html" target="_parent" class="botones_atras">

@@ -516,7 +516,7 @@ ol.sucursal {
     margin-top: 20px;
 }
 
-#Historia {
+#Historia, #Tasas {
     text-align: justify;
     font-size: 20px;
     margin: 20px;
