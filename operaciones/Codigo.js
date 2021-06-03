@@ -179,9 +179,9 @@ function calcularPrestamo() {
     cuotas = document.getElementById("Renovacion_Cuotas").value;
     if (dinero <= 0 || cuotas <= 0 || cuotas.includes(".") || cuotas.includes(",")) {
         alert("SE HAN INGRESADOS VALORES NO VÁLIDOS")
-    } else if (dinero > 5000000 || cuotas > 100) {
-        alert("USTED NO PUEDE PEDIR MÁS DE $5.000.000 Y LA CANTIDAD MÁXIMA DE CUOTAS ES 100")
-    } else if (dinero > 0 && cuotas > 0 && cuotas <= 100 && dinero <= 5000000) {
+    } else if (dinero > 1000000 || cuotas > 100) {
+        alert("USTED NO PUEDE PEDIR MÁS DE $1.000.000 Y LA CANTIDAD MÁXIMA DE CUOTAS ES 100")
+    } else if (dinero > 0 && cuotas > 0 && cuotas <= 100 && dinero <= 1000000) {
         if (cuotas <= 10) {
             Total = Number(dinero) + ((Number(dinero) * 15) / 100);
             valor_Cuotas = Number(Total) / Number(cuotas);
