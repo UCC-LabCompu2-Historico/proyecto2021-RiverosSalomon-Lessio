@@ -398,7 +398,6 @@ input::-webkit-inner-spin-button {
 
 button::before {
     content: '';
-
     min-width: calc(200px + 12px);
     min-height: calc(50px + 12px);
     border: 6px solid #ec2d2d;
@@ -539,4 +538,12 @@ canvas {
 }
 #Grafico_PF{
     background-color: #ffffff;
+}
+#comprobante_P,#comprobante_TC {
+    background-image: url(../Imagenes/Comprobante.png);
+    background-color: #ffffff;
+}
+.grafico,.comprobante{
+    padding: 15px 20px;
+    margin: 10px auto;
 }
