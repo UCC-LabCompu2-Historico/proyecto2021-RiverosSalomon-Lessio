@@ -25,12 +25,13 @@ function Cambio() {
                 alert("DEBIDO A NORMATIVAS NACIONALES SOLO PUEDES ADQUIRIR HASTA R$200")
             }
         } else if (operacion == "comprar") {
-            if (moneda == "dolar" && valor<=200) {
+            if (moneda == "dolar") {
                 Total = Number(valor) * 150;
-            }else if (moneda == "euro" && valor<=200) {
+            }else if (moneda == "euro") {
                 Total = Number(valor) * 180;
-            }else if (moneda == "real" && valor<=200) {
+            }else if (moneda == "real") {
                 Total = Number(valor) * 15;
+            }
         }
         document.getElementById("Total_Cambio").value = Total.toFixed(2);
         Tipo_de_Cambio(operacion,moneda,valor,Total)
