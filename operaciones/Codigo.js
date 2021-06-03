@@ -27,17 +27,10 @@ function Cambio() {
         } else if (operacion == "comprar") {
             if (moneda == "dolar" && valor<=200) {
                 Total = Number(valor) * 150;
-            } else if(moneda == "dolar" && valor>200){
-                alert("DEBIDO A NORMATIVAS NACIONALES SOLO PUEDES ADQUIRIR HASTA US$200")
             }else if (moneda == "euro" && valor<=200) {
                 Total = Number(valor) * 180;
-            } else if (moneda == "euro" && valor>200){
-                alert("DEBIDO A NORMATIVAS NACIONALES SOLO PUEDES ADQUIRIR HASTA €200")
             }else if (moneda == "real" && valor<=200) {
                 Total = Number(valor) * 15;
-            }else if(moneda == "real" && valor>200){
-                alert("DEBIDO A NORMATIVAS NACIONALES SOLO PUEDES ADQUIRIR HASTA R$200")
-            }
         }
         document.getElementById("Total_Cambio").value = Total.toFixed(2);
         Tipo_de_Cambio(operacion,moneda,valor,Total)
