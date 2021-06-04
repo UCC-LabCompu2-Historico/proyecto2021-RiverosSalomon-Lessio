@@ -197,7 +197,7 @@ function calcularPrestamo() {
 
 /**
  *  Crea un comprobante con los datos ingresados
- * @method crearGrafico
+ * @method comprobante
  * @param Param1
  * @param Param2
  * @param Param3
