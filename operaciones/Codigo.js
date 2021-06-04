@@ -9,20 +9,24 @@ function Cambio() {
     moneda = document.getElementById("option2").value;
     if (valor <= 0) {
         alert("SE HAN INGRESADOS VALORES NO VÁLIDOS");
+        document.Tipo_de_Cambio.cambio.value= "";
     } else if (valor > 0) {
         if (operacion == "vender") {
             if (moneda == "dolar" && valor<=31000) {
                 Total = Number(valor) / 155;
             } else if(moneda == "dolar" && valor>31000){
-                alert("DEBIDO A NORMATIVAS NACIONALES SOLO PUEDES ADQUIRIR HASTA US$200")
+                alert("DEBIDO A NORMATIVAS NACIONALES SOLO PUEDES ADQUIRIR HASTA US$200");
+                document.Tipo_de_Cambio.cambio.value= "";
             } else if (moneda == "euro" && valor<=37000) {
                 Total = Number(valor) / 185;
             } else if(moneda == "euro" && valor>37000){
-                alert("DEBIDO A NORMATIVAS NACIONALES SOLO PUEDES ADQUIRIR HASTA €200")
+                alert("DEBIDO A NORMATIVAS NACIONALES SOLO PUEDES ADQUIRIR HASTA €200");
+                document.Tipo_de_Cambio.cambio.value= "";
             }else if (moneda == "real" && valor<=4000) {
                 Total = Number(valor) / 20;
             }else if(moneda == "real" && valor>4000){
-                alert("DEBIDO A NORMATIVAS NACIONALES SOLO PUEDES ADQUIRIR HASTA R$200")
+                alert("DEBIDO A NORMATIVAS NACIONALES SOLO PUEDES ADQUIRIR HASTA R$200");
+                document.Tipo_de_Cambio.cambio.value= "";
             }
         } else if (operacion == "comprar") {
             if (moneda == "dolar") {
@@ -103,9 +107,13 @@ function calcularPlazoFijo() {
     Total = Number(dinero) + Number(ganancia);
     Total_Mensual = Number(ganancia) / Number(renovacion);
     if (dinero <= 0 || renovacion <= 0 || renovacion.includes(".") || renovacion.includes(",")) {
-        alert("SE HAN INGRESADOS VALORES NO VÁLIDOS")
+        alert("SE HAN INGRESADOS VALORES NO VÁLIDOS");
+        document.Plazo_Fijo.Renovacion_PF.value= "";
+        document.Plazo_Fijo.Inversion_PF.value="";
     } else if (dinero > 1000000 || renovacion > 50) {
-        alert("USTED PUEDE CREAR PLAZOS FIJOS DE HASTA $1.000.000 Y LA RENOVACIÓN MÁXIMA ES 50 MESES")
+        alert("USTED PUEDE CREAR PLAZOS FIJOS DE HASTA $1.000.000 Y LA RENOVACIÓN MÁXIMA ES 50 MESES");
+        document.Plazo_Fijo.Renovacion_PF.value= "";
+        document.Plazo_Fijo.Inversion_PF.value="";
     } else if (dinero > 0 && renovacion > 0) {
         document.getElementById("Total_PF").value = Total.toFixed(2);
         document.getElementById("Ganancias_PF").value = ganancia.toFixed(2);
@@ -171,11 +179,17 @@ function calcularPrestamo() {
     fecha = document.getElementById("fecha_P").value;
     dinero = document.getElementById("Inversion_P").value;
     cuotas = document.getElementById("Renovacion_Cuotas").value;
-    if (dinero <= 0 || cuotas <= 0 || cuotas.includes(".") || cuotas.includes(",")) {
-        alert("SE HAN INGRESADOS VALORES NO VÁLIDOS")
-    } else if (dinero > 1000000 || cuotas > 100) {
-        alert("USTED NO PUEDE PEDIR MÁS DE $1.000.000 Y LA CANTIDAD MÁXIMA DE CUOTAS ES 100")
-    } else if (dinero > 0 && cuotas > 0 && cuotas <= 100 && dinero <= 1000000) {
+    if (dinero <= 0 || cuotas <= 0 || cuotas.includes(".") || cuotas.includes(",") || fecha=="") {
+        alert("SE HAN INGRESADOS VALORES NO VÁLIDOS O FALTAN VALORES");
+        document.Prestamos.Renovacion_P.value= "";
+        document.Prestamos.Inversion_P.value="";
+        document.Prestamos.fecha_P.value="";
+    } else if (dinero > 1000000 || cuotas > 100 || fecha=="") {
+        alert("USTED NO PUEDE PEDIR MÁS DE $1.000.000 Y LA CANTIDAD MÁXIMA DE CUOTAS ES 100");
+        document.Prestamos.Renovacion_P.value= "";
+        document.Prestamos.Inversion_P.value="";
+        document.Prestamos.fecha_P.value="";
+    } else if (dinero > 0 && cuotas > 0 && cuotas <= 100 && dinero <= 1000000 && fecha!="") {
         if (cuotas <= 10) {
             Total = Number(dinero) + ((Number(dinero) * 15) / 100);
             valor_Cuotas = Number(Total) / Number(cuotas);
