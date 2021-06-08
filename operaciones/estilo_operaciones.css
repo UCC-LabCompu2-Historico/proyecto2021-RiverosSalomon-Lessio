@@ -289,7 +289,7 @@ select::-ms-expand {
 .select {
     position: relative;
     display: flex;
-    width: 300px;
+    width: 350px;
     height: 50px;
     line-height: 3;
     background: #ee0000;
@@ -326,6 +326,8 @@ input[type=number] {
     padding: 15px 20px;
     font-size: 20px;
     margin: 10px auto;
+    width: 350px;
+    height: 50px;
     display: inline-block;
     border: 2px solid #cccccc;
     border-radius: 4px;
@@ -345,9 +347,9 @@ input::-webkit-inner-spin-button {
     border-radius: 10px;
     display: block;
     padding: 5px 10px;
-    height: 42px;
+    width: 320px;
+    height: 50px;
     margin: 25px auto;
-    min-width: 225px;
     -webkit-appearance: none;
     background-repeat: no-repeat;
     background-position: right .7em top 50%, 0 0;

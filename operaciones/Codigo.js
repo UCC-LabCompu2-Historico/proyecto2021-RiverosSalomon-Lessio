@@ -147,29 +147,29 @@ function calcularPlazoFijo() {
 }
 
 /**
- *  Crea un grafico
+ *  Crea un grafico para mostrar el progreso del plazo fijo
  * @method crearGrafico
- * @param Param1
- * @param Param2
+ * @param Meses
+ * @param Dinero
  */
-function crearGrafico(param1, param2) {
+function crearGrafico(Meses, Dinero) {
     var canvas = document.getElementById("Grafico_PF");
     var ctx = canvas.getContext("2d");
     canvas.width = canvas.width;
     var chart = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: param1,
+            labels: Meses,
             datasets: [{
                 label: 'GRAFICO DE INVERSION',
                 backgroundColor: 'rgb(255,51,51)',
                 borderColor: 'rgb(0,0,0)',
-                data: param2
+                data: Dinero
             }]
         },
+        options: {}
     });
 }
-
 /**
  * Calcula el interes del prestamo y el valor de las cuotas
  * @method calcularPrestamo
