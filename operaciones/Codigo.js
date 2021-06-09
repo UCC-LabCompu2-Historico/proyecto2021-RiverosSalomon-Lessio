@@ -7,8 +7,8 @@ function Cambio() {
     valor = document.getElementById("cambio").value;
     operacion = document.getElementById("option1").value;
     moneda = document.getElementById("option2").value;
-    if (valor <= 0) {
-        alert("SE HAN INGRESADOS VALORES NO VÁLIDOS");
+    if (valor <= 0 || operacion=="nada" || moneda=="nada") {
+        alert("SE HAN INGRESADOS VALORES NO VÁLIDOS O FALTAN DATOS");
         document.Tipo_de_Cambio.cambio.value = "";
     } else if (valor > 0) {
         if (operacion == "vender") {
@@ -47,8 +47,8 @@ function Cambio() {
  * @method Tipo_de_Cambio
  * @param {text} Operaciones - eleccion entre vender o comprar
  * @param {text} Moneda - eleccion entre las diferentes monedas extranjeras
- * @param {Number} Valor - monto ingresado para cambiar a la moneda que corresponda
- * @param {Number} Total - dinero total luego de realizar la operacion
+ * @param {number} Valor - monto ingresado para cambiar a la moneda que corresponda
+ * @param {number} Total - dinero total luego de realizar la operacion
  */
 function Tipo_de_Cambio(Operaciones, Moneda, Valor, Total) {
     var canvas = document.getElementById("comprobante_TC");
@@ -57,31 +57,37 @@ function Tipo_de_Cambio(Operaciones, Moneda, Valor, Total) {
     ctx.font = "25px Arial";
     if (Operaciones == "vender") {
         if (Moneda == "dolar") {
-            ctx.fillText('Seleccionó: ' + Operaciones, 100, 250);
-            ctx.fillText('El monto ingresado es $' + Valor, 100, 300);
-            ctx.fillText('Le hemos vendido US$' + Total.toFixed(2), 100, 350);
+            ctx.fillText('Operación: ' + Operaciones, 50, 150);
+            ctx.fillText('Moneda Extranjera: ' + Moneda, 50, 200);
+            ctx.fillText('El monto ingresado es $' + Number(Valor).toFixed(2), 50, 250);
+            ctx.fillText('Le hemos vendido US$' + Total.toFixed(2), 50, 300);
         } else if (Moneda == "euro") {
-            ctx.fillText('Seleccionó: ' + Operaciones, 100, 250);
-            ctx.fillText('El monto ingresado es  $' + Valor, 100, 300);
-            ctx.fillText('Le hemos vendido  €' + Total.toFixed(2), 100, 350);
+            ctx.fillText('Operación: ' + Operaciones, 50, 150);
+            ctx.fillText('Moneda Extranjera: ' + Moneda, 50, 200);
+            ctx.fillText('El monto ingresado es  $' + Number(Valor).toFixed(2), 50, 250);
+            ctx.fillText('Le hemos vendido  €' + Total.toFixed(2), 50, 300);
         } else if (Moneda == "real") {
-            ctx.fillText('Seleccionó: ' + Operaciones, 100, 250);
-            ctx.fillText('El monto ingresado es  $' + Valor, 100, 300);
-            ctx.fillText('Le hemos vendido  R$' + Total.toFixed(2), 100, 350);
+            ctx.fillText('Operación: ' + Operaciones, 50, 150);
+            ctx.fillText('Moneda Extranjera: ' + Moneda, 50, 200);
+            ctx.fillText('El monto ingresado es  $' + Number(Valor).toFixed(2), 50, 250);
+            ctx.fillText('Le hemos vendido  R$' + Total.toFixed(2), 50, 300);
         }
     } else if (Operaciones == "comprar") {
         if (Moneda == "dolar") {
-            ctx.fillText('Seleccionó: ' + Operaciones, 100, 250);
-            ctx.fillText('El monto ingresado es US$' + Valor, 100, 300);
-            ctx.fillText('Le hemos comprado $' + Total.toFixed(2), 100, 350);
+            ctx.fillText('Operación: ' + Operaciones, 50, 150);
+            ctx.fillText('Moneda Extranjera: ' + Moneda, 50, 200);
+            ctx.fillText('El monto ingresado es US$' + Number(Valor).toFixed(2), 50, 250);
+            ctx.fillText('Le hemos comprado $' + Total.toFixed(2), 50, 300);
         } else if (Moneda == "euro") {
-            ctx.fillText('Seleccionó: ' + Operaciones, 100, 250);
-            ctx.fillText('El monto ingresado es  €' + Valor, 100, 300);
-            ctx.fillText('Le hemos comprado $' + Total.toFixed(2), 100, 350);
+            ctx.fillText('Operación: ' + Operaciones, 50, 150);
+            ctx.fillText('Moneda Extranjera: ' + Moneda, 50, 200);
+            ctx.fillText('El monto ingresado es  €' + Number(Valor).toFixed(2), 50, 250);
+            ctx.fillText('Le hemos comprado $' + Total.toFixed(2), 50, 300);
         } else if (Moneda == "real") {
-            ctx.fillText('Seleccionó: ' + Operaciones, 100, 250);
-            ctx.fillText('El monto ingresado es  R$' + Valor, 100, 300);
-            ctx.fillText('Le hemos comprado $ ' + Total.toFixed(2), 100, 350);
+            ctx.fillText('Operación: ' + Operaciones, 50, 150);
+            ctx.fillText('Moneda Extranjera: ' + Moneda, 50, 200);
+            ctx.fillText('El monto ingresado es  R$' + Number(Valor).toFixed(2), 50, 250);
+            ctx.fillText('Le hemos comprado $ ' + Total.toFixed(2), 50, 300);
         }
     }
 }
@@ -106,8 +112,8 @@ function calcularPlazoFijo() {
     ganancia = (Number(dinero) * Number(porcentaje_Mensual)) / 100;
     Total = Number(dinero) + Number(ganancia);
     Total_Mensual = Number(ganancia) / Number(renovacion);
-    if (dinero <= 0 || renovacion <= 0 || renovacion.includes(".") || renovacion.includes(",")) {
-        alert("SE HAN INGRESADOS VALORES NO VÁLIDOS");
+    if (dinero <= 0 || renovacion <= 0 || renovacion.includes(".") || renovacion.includes(",") || banco_Value=="nada") {
+        alert("SE HAN INGRESADOS VALORES NO VÁLIDOS O FALTAN DATOS");
         document.Plazo_Fijo.Renovacion_PF.value = "";
         document.Plazo_Fijo.Inversion_PF.value = "";
     } else if (dinero > 1000000 || renovacion > 50) {
@@ -149,8 +155,8 @@ function calcularPlazoFijo() {
 /**
  *  Crea un grafico para mostrar el progreso del plazo fijo
  * @method crearGrafico
- * @param {Number} Meses - tiempo de renovacion, son los meses que figuran en el grafico
- * @param {Number} Dinero - monto inicial y lineal segun el tiempo de renovacion
+ * @param {number} Meses - tiempo de renovacion, son los meses que figuran en el grafico
+ * @param {number} Dinero - monto inicial y lineal segun el tiempo de renovacion
  */
 function crearGrafico(Meses, Dinero) {
     var canvas = document.getElementById("Grafico_PF");
@@ -206,25 +212,27 @@ function calcularPrestamo() {
         }
         document.getElementById("Total_P").value = Total.toFixed(2);
         document.getElementById("Cuotas_P").value = valor_Cuotas.toFixed(2);
-        comprobante(fecha, cuotas, valor_Cuotas, Total);
+        comprobante(dinero,fecha, cuotas, valor_Cuotas, Total);
     }
 }
 
 /**
  *  Crea un comprobante con los datos ingresados en prestamos
  * @method comprobante
+ * @param {number} Dinero - monto inicial solicitado
  * @param {text} Fecha - fecha en la cual se pidio el prestamo
- * @param {Number} Cuotas - cantidad de cuotas solicitas
- * @param {Number} Valor - importe de cada cuota
- * @param {Number} Total - el monto que se debe devolver
+ * @param {number} Cuotas - cantidad de cuotas solicitas
+ * @param {number} Valor - importe de cada cuota
+ * @param {number} Total - el monto que se debe devolver
  */
-function comprobante(Fecha, Cuotas, Valor, Total) {
+function comprobante(Dinero,Fecha, Cuotas, Valor, Total) {
     var canvas = document.getElementById("comprobante_P");
     var ctx = canvas.getContext("2d");
     canvas.width = canvas.width;
     ctx.font = "25px Arial";
-    ctx.fillText('El préstamo se pidió el ' + Fecha, 100, 200);
-    ctx.fillText('Se pagará en ' + Cuotas + ' cuotas', 100, 260);
-    ctx.fillText('El valor de cada cuota es $' + Valor.toFixed(2), 100, 320);
-    ctx.fillText('El valor a devolver es $' + Total, 100, 380);
+    ctx.fillText('El monto solicitado es $'+ Number(Dinero).toFixed(2),50, 100)
+    ctx.fillText('El préstamo se pidió el ' + Fecha, 50, 150);
+    ctx.fillText('Se pagará en ' + Cuotas + ' cuotas', 50, 200);
+    ctx.fillText('El valor de cada cuota es $' + Valor.toFixed(2), 50, 250);
+    ctx.fillText('El valor a devolver es $' + Total.toFixed(2), 50, 300);
 }

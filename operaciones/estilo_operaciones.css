@@ -538,14 +538,27 @@ footer {
 }
 
 canvas {
-    border-style: outset;
+    position: center;
 }
 #Grafico_PF{
     background-color: #ffffff;
 }
+.comprobante{
+    background-color: #d00000;
+    width: 600px;
+    height: 600px;
+    border-style: outset
+}
+.datos{
+    background-color: #9f9595;
+    width: 600px;
+    height: 100px;
+    color: #000000;
+    padding-top: 2px;
+}
 #comprobante_P,#comprobante_TC {
-    background-image: url(../Imagenes/Comprobante.png);
     background-color: #ffffff;
+    margin-bottom: 10px;
 }
 .grafico,.comprobante{
     padding: 15px 20px;

@@ -61,7 +61,7 @@
         <div class="select">
             <label for="option1"></label>
             <select id="option1" name="Operacion" required>
-                <option selected disabled>Seleccione una operación</option>
+                <option selected disabled value="nada">Seleccione una operación</option>
                 <option value="vender" id="vender">Vender</option>
                 <option value="comprar" id="comprar">Comprar</option>
             </select>
@@ -69,7 +69,7 @@
         <div class="select">
             <label for="option2"></label>
             <select id="option2" name="moneda" required>
-                <option selected disabled>Seleccione una Moneda</option>
+                <option selected disabled value="nada">Seleccione una Moneda</option>
                 <option value="dolar" id="dolar">Dolar</option>
                 <option value="euro" id="euro">Euro</option>
                 <option value="real" id="real">Real</option>
@@ -89,8 +89,13 @@
         </div>
     </form>
     <div class="comprobante">
-        <canvas id="comprobante_TC" width="600px" height="700px">
+        <h1>COMPROBANTE</h1>
+        <canvas id="comprobante_TC" width="600px" height="400px">
         </canvas>
+        <div class="datos">
+            <p>Mail: uccbcontact@uccb.com.ar</p>
+            <p>Télefono: 0800-423240-7</p>
+        </div>
     </div>
 
 </section>
