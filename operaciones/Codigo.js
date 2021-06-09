@@ -29,12 +29,18 @@ function Cambio() {
                 document.Tipo_de_Cambio.cambio.value = "";
             }
         } else if (operacion == "comprar") {
-            if (moneda == "dolar") {
+            if (moneda == "dolar" && valor<=100000) {
                 Total = Number(valor) * 150;
-            } else if (moneda == "euro") {
+            } else if (moneda == "euro" && valor<=100000) {
                 Total = Number(valor) * 180;
-            } else if (moneda == "real") {
+            } else if (moneda == "real" && valor<=100000) {
                 Total = Number(valor) * 15;
+            }else if(moneda=="dolar" && valor>100000){
+                alert("EL MONTO DE DINERO A CAMBIAR NO PUEDE SUPERAR US$100.000")
+            }else if(moneda=="euro" && valor>100000) {
+                alert("EL MONTO DE DINERO A CAMBIAR NO PUEDE SUPERAR €100.000")
+            }else if(moneda=="real" && valor>100000) {
+                alert("EL MONTO DE DINERO A CAMBIAR NO PUEDE SUPERAR R$100.000")
             }
         }
         document.getElementById("Total_Cambio").value = Total.toFixed(2);
@@ -77,17 +83,17 @@ function Tipo_de_Cambio(Operaciones, Moneda, Valor, Total) {
             ctx.fillText('Operación: ' + Operaciones, 50, 150);
             ctx.fillText('Moneda Extranjera: ' + Moneda, 50, 200);
             ctx.fillText('El monto ingresado es US$' + Number(Valor).toFixed(2), 50, 250);
-            ctx.fillText('Le hemos comprado $' + Total.toFixed(2), 50, 300);
+            ctx.fillText('Usted ha recibido $' + Total.toFixed(2), 50, 300);
         } else if (Moneda == "euro") {
             ctx.fillText('Operación: ' + Operaciones, 50, 150);
             ctx.fillText('Moneda Extranjera: ' + Moneda, 50, 200);
             ctx.fillText('El monto ingresado es  €' + Number(Valor).toFixed(2), 50, 250);
-            ctx.fillText('Le hemos comprado $' + Total.toFixed(2), 50, 300);
+            ctx.fillText('Usted ha recibido $' + Total.toFixed(2), 50, 300);
         } else if (Moneda == "real") {
             ctx.fillText('Operación: ' + Operaciones, 50, 150);
             ctx.fillText('Moneda Extranjera: ' + Moneda, 50, 200);
             ctx.fillText('El monto ingresado es  R$' + Number(Valor).toFixed(2), 50, 250);
-            ctx.fillText('Le hemos comprado $ ' + Total.toFixed(2), 50, 300);
+            ctx.fillText('Usted ha recibido $ ' + Total.toFixed(2), 50, 300);
         }
     }
 }
