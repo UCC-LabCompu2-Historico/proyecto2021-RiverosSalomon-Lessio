@@ -40,7 +40,6 @@ body {
     float: left;
     border-radius: 60%;
 }
-
 .animacion {
     margin: 50px auto;
     width: 100%;
@@ -55,7 +54,6 @@ body {
     vertical-align: middle;
 
 }
-
 .animacion:before {
     content: '';
     display: inline-block;
@@ -73,38 +71,29 @@ body {
     outline: none;
     vertical-align: middle;
 
-    text-shadow: 0 3px 20px red,
-    0 0 20px red,
-    0 0 10px orange;
+    text-shadow:
+            0 3px 20px red,
+            0 0 20px red,
+            0 0 10px orange;
     animation: 2s efecto infinite alternate linear;
 }
 
 @keyframes efecto {
-    0% {
-        text-shadow: 0 3px 20px red, 0 0 20px red,
-        0 0 10px orange,
-        0 0 0 yellow;
-    }
-    25% {
-        text-shadow: 0 3px 20px red, 0 0 30px red,
-        0 0 10px orange,
-        0 0 5px yellow;
-    }
-    50% {
-        text-shadow: 0 3px 20px red, 0 0 20px red,
-        0 0 10px orange,
-        0 0 5px yellow;
-    }
-    75% {
-        text-shadow: 0 3px 20px red, 0 0 20px red,
-        0 0 10px orange,
-        0 0 5px yellow;
-    }
-    100% {
-        text-shadow: 0 3px 20px red, 0 0 20px red,
-        0 0 10px orange,
-        0 0 5px yellow;
-    }
+    0%   { text-shadow: 0 3px 20px red, 0 0 20px red,
+    0 0 10px orange,
+    0 0 0 yellow;}
+    25%   { text-shadow: 0 3px 20px red, 0 0 30px red,
+    0 0 10px orange,
+    0 0 5px yellow;}
+    50%   { text-shadow: 0 3px 20px red, 0 0 20px red,
+    0 0 10px orange,
+    0 0 5px yellow; }
+    75%   { text-shadow: 0 3px 20px red, 0 0 20px red,
+    0 0 10px orange,
+    0 0 5px yellow;}
+    100%   { text-shadow: 0 3px 20px red, 0 0 20px red,
+    0 0 10px orange,
+    0 0 5px yellow; }
 }
 
 .botones_menu {
@@ -278,7 +267,7 @@ body {
     }
 }
 
-.botones_op {
+.botones_op{
     display: inline-block;
     width: 200px;
     height: 40px;
@@ -297,12 +286,12 @@ body {
     cursor: pointer;
 }
 
-.botones_op span {
+.botones_op span{
     position: relative;
     z-index: 2;
 }
 
-.botones_op:after {
+.botones_op:after{
     position: absolute;
     content: "";
     top: 0;
@@ -313,11 +302,11 @@ body {
     transition: all .35s;
 }
 
-.botones_op:hover {
+.botones_op:hover{
     color: #fff;
 }
 
-.botones_op:hover:after {
+.botones_op:hover:after{
     width: 100%;
 }
 
@@ -415,15 +404,14 @@ body {
     position: relative;
     bottom: 0;
 }
-
-.flip-box {
+.flip-card {
     background-color: transparent;
     width: 400px;
     height: 150px;
     perspective: 1000px;
 }
 
-.flip-box-inner {
+.flip-card-inner {
     position: relative;
     width: 100%;
     height: 100%;
@@ -432,11 +420,11 @@ body {
     transform-style: preserve-3d;
 }
 
-.flip-box:hover .flip-box-inner {
+.flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
 }
 
-.flip-box-front, .flip-box-back {
+.flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -444,15 +432,15 @@ body {
     backface-visibility: hidden;
 }
 
-.flip-box-front {
-    background-color: transparent;
+.flip-card-front {
     color: #ffffff;
+    background-color: transparent;
 }
 
-.flip-box-back {
-    background-color: transparent;
-    color: white;
+.flip-card-back {
+    color: #ffffff;
     font-size: 20px;
+    background-color: transparent;
     transform: rotateY(180deg);
 }
 
@@ -487,10 +475,9 @@ body {
     width: 800px;
 }
 
-caption {
+caption{
     color: #ffffff;
 }
-
 table {
     background: #ffffff;
     color: #000000;
