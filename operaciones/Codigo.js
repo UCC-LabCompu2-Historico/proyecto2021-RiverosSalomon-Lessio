@@ -43,15 +43,7 @@ function Cambio() {
 }
 
 /**
- * Represents a book.
- * @constructor
- * @param {string} title - The title of the book.
- * @param {string} author - The author of the book.
- */
-function Book(title, author) {
-}
-/**
- *  Crea un comprobante con los datos ingresados
+ *  Crea un comprobante con los datos ingresados en tipo de cambio
  * @method Tipo_de_Cambio
  * @param {text} Operaciones - eleccion entre vender o comprar
  * @param {text} Moneda - eleccion entre las diferentes monedas extranjeras
@@ -96,7 +88,7 @@ function Tipo_de_Cambio(Operaciones, Moneda, Valor, Total) {
 
 /**
  * Calcula el Plazo fijo segun el dinero invertido
- * Realiza una grafica
+ * Y llama a una funcion para realiza una grafica
  * @method calcularPlazoFijo
  */
 function calcularPlazoFijo() {
@@ -219,7 +211,7 @@ function calcularPrestamo() {
 }
 
 /**
- *  Crea un comprobante con los datos ingresados
+ *  Crea un comprobante con los datos ingresados en prestamos
  * @method comprobante
  * @param {text} Fecha - fecha en la cual se pidio el prestamo
  * @param {Number} Cuotas - cantidad de cuotas solicitas
@@ -231,7 +223,7 @@ function comprobante(Fecha, Cuotas, Valor, Total) {
     var ctx = canvas.getContext("2d");
     canvas.width = canvas.width;
     ctx.font = "25px Arial";
-    ctx.fillText('El préstamo se pidió en ' + Fecha, 100, 200);
+    ctx.fillText('El préstamo se pidió el ' + Fecha, 100, 200);
     ctx.fillText('Se pagará en ' + Cuotas + ' cuotas', 100, 260);
     ctx.fillText('El valor de cada cuota es $' + Valor.toFixed(2), 100, 320);
     ctx.fillText('El valor a devolver es $' + Total, 100, 380);
