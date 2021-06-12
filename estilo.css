@@ -444,7 +444,7 @@ body {
     background-color: transparent;
     transform: rotateY(180deg);
 }
-
+/*Las Funciones flip-card no funcionan para Firefox*/
 #general_footer {
     color: #000000;
     text-align: left;
