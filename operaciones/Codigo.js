@@ -7,9 +7,11 @@ function Cambio() {
     valor = document.getElementById("cambio").value;
     operacion = document.getElementById("option1").value;
     moneda = document.getElementById("option2").value;
-    if (valor <= 0 || operacion=="nada" || moneda=="nada") {
+    if (valor <= 0) {
         alert("SE HAN INGRESADOS VALORES NO VÁLIDOS O FALTAN DATOS");
         document.Tipo_de_Cambio.cambio.value = "";
+    } else if (operacion == "nada" || moneda == "nada") {
+        alert("SE HAN INGRESADOS VALORES NO VÁLIDOS O FALTAN DATOS");
     } else if (valor > 0) {
         if (operacion == "vender") {
             if (moneda == "dolar" && valor <= 31000) {
@@ -29,18 +31,21 @@ function Cambio() {
                 document.Tipo_de_Cambio.cambio.value = "";
             }
         } else if (operacion == "comprar") {
-            if (moneda == "dolar" && valor<=100000) {
+            if (moneda == "dolar" && valor <= 100000) {
                 Total = Number(valor) * 150;
-            } else if (moneda == "euro" && valor<=100000) {
+            } else if (moneda == "euro" && valor <= 100000) {
                 Total = Number(valor) * 180;
-            } else if (moneda == "real" && valor<=100000) {
+            } else if (moneda == "real" && valor <= 100000) {
                 Total = Number(valor) * 15;
-            }else if(moneda=="dolar" && valor>100000){
-                alert("EL MONTO DE DINERO A CAMBIAR NO PUEDE SUPERAR US$100.000")
-            }else if(moneda=="euro" && valor>100000) {
-                alert("EL MONTO DE DINERO A CAMBIAR NO PUEDE SUPERAR €100.000")
-            }else if(moneda=="real" && valor>100000) {
-                alert("EL MONTO DE DINERO A CAMBIAR NO PUEDE SUPERAR R$100.000")
+            } else if (moneda == "dolar" && valor > 100000) {
+                alert("EL MONTO DE DINERO A CAMBIAR NO PUEDE SUPERAR US$100.000");
+                document.Tipo_de_Cambio.cambio.value = "";
+            } else if (moneda == "euro" && valor > 100000) {
+                alert("EL MONTO DE DINERO A CAMBIAR NO PUEDE SUPERAR €100.000");
+                document.Tipo_de_Cambio.cambio.value = "";
+            } else if (moneda == "real" && valor > 100000) {
+                alert("EL MONTO DE DINERO A CAMBIAR NO PUEDE SUPERAR R$100.000");
+                document.Tipo_de_Cambio.cambio.value = "";
             }
         }
         document.getElementById("Total_Cambio").value = Total.toFixed(2);
@@ -118,15 +123,21 @@ function calcularPlazoFijo() {
     ganancia = (Number(dinero) * Number(porcentaje_Mensual)) / 100;
     Total = Number(dinero) + Number(ganancia);
     Total_Mensual = Number(ganancia) / Number(renovacion);
-    if (dinero <= 0 || renovacion <= 0 || renovacion.includes(".") || renovacion.includes(",") || banco_Value=="nada") {
+    if (dinero <= 0) {
+        alert("SE HAN INGRESADOS VALORES NO VÁLIDOS O FALTAN DATOS");
+        document.Plazo_Fijo.Inversion_PF.value = "";
+    } else if (renovacion <= 0 || renovacion.includes(".") || renovacion.includes(",")) {
         alert("SE HAN INGRESADOS VALORES NO VÁLIDOS O FALTAN DATOS");
         document.Plazo_Fijo.Renovacion_PF.value = "";
+    } else if (banco_Value == "nada") {
+        alert("SE HAN INGRESADOS VALORES NO VÁLIDOS O FALTAN DATOS");
+    } else if (dinero > 1000000) {
+        alert("USTED PUEDE CREAR PLAZOS FIJOS DE HASTA $1.000.000");
         document.Plazo_Fijo.Inversion_PF.value = "";
-    } else if (dinero > 1000000 || renovacion > 50) {
-        alert("USTED PUEDE CREAR PLAZOS FIJOS DE HASTA $1.000.000 Y LA RENOVACIÓN MÁXIMA ES 50 MESES");
+    } else if (renovacion > 50) {
+        alert("LA RENOVACIÓN MÁXIMA ES 50 MESES");
         document.Plazo_Fijo.Renovacion_PF.value = "";
-        document.Plazo_Fijo.Inversion_PF.value = "";
-    } else if (dinero > 0 && renovacion > 0) {
+    } else if (dinero > 0 && renovacion > 0 && dinero <= 1000000 && renovacion <= 50) {
         document.getElementById("Total_PF").value = Total.toFixed(2);
         document.getElementById("Ganancias_PF").value = ganancia.toFixed(2);
         var currentdate = new Date();
@@ -192,16 +203,20 @@ function calcularPrestamo() {
     fecha = document.getElementById("fecha_P").value;
     dinero = document.getElementById("Inversion_P").value;
     cuotas = document.getElementById("Renovacion_Cuotas").value;
-    if (dinero <= 0 || cuotas <= 0 || cuotas.includes(".") || cuotas.includes(",") || fecha == "") {
+    if (dinero <= 0) {
+        alert("SE HAN INGRESADOS VALORES NO VÁLIDOS O FALTAN VALORES");
+        document.Prestamos.Inversion_P.value = "";
+    } else if (cuotas <= 0 || cuotas.includes(".") || cuotas.includes(",")) {
         alert("SE HAN INGRESADOS VALORES NO VÁLIDOS O FALTAN VALORES");
         document.Prestamos.Renovacion_P.value = "";
+    }else if (dinero > 1000000) {
+        alert("USTED NO PUEDE PEDIR MÁS DE $1.000.000");
         document.Prestamos.Inversion_P.value = "";
-        document.Prestamos.fecha_P.value = "";
-    } else if (dinero > 1000000 || cuotas > 100 || fecha == "") {
-        alert("USTED NO PUEDE PEDIR MÁS DE $1.000.000 Y LA CANTIDAD MÁXIMA DE CUOTAS ES 100");
+    } else if (cuotas > 100) {
+        alert("LA CANTIDAD MÁXIMA DE CUOTAS ES 100");
         document.Prestamos.Renovacion_P.value = "";
-        document.Prestamos.Inversion_P.value = "";
-        document.Prestamos.fecha_P.value = "";
+    } else if (fecha == "") {
+        alert("SE HAN INGRESADOS VALORES NO VÁLIDOS O FALTAN VALORES");
     } else if (dinero > 0 && cuotas > 0 && cuotas <= 100 && dinero <= 1000000 && fecha != "") {
         if (cuotas <= 10) {
             Total = Number(dinero) + ((Number(dinero) * 15) / 100);
@@ -218,7 +233,7 @@ function calcularPrestamo() {
         }
         document.getElementById("Total_P").value = Total.toFixed(2);
         document.getElementById("Cuotas_P").value = valor_Cuotas.toFixed(2);
-        comprobante(dinero,fecha, cuotas, valor_Cuotas, Total);
+        comprobante(dinero, fecha, cuotas, valor_Cuotas, Total);
     }
 }
 
@@ -231,12 +246,12 @@ function calcularPrestamo() {
  * @param {number} Valor - importe de cada cuota
  * @param {number} Total - el monto que se debe devolver
  */
-function comprobante(Dinero,Fecha, Cuotas, Valor, Total) {
+function comprobante(Dinero, Fecha, Cuotas, Valor, Total) {
     var canvas = document.getElementById("comprobante_P");
     var ctx = canvas.getContext("2d");
     canvas.width = canvas.width;
     ctx.font = "25px Arial";
-    ctx.fillText('El monto solicitado es $'+ Number(Dinero).toFixed(2),50, 100)
+    ctx.fillText('El monto solicitado es $' + Number(Dinero).toFixed(2), 50, 100)
     ctx.fillText('El préstamo se pidió el ' + Fecha, 50, 150);
     ctx.fillText('Se pagará en ' + Cuotas + ' cuotas', 50, 200);
     ctx.fillText('El valor de cada cuota es $' + Valor.toFixed(2), 50, 250);
