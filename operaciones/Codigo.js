@@ -49,7 +49,9 @@ function Cambio() {
             }
         }
         document.getElementById("Total_Cambio").value = Total.toFixed(2);
-        Tipo_de_Cambio(operacion, moneda, valor, Total)
+        setTimeout(function () {
+            Tipo_de_Cambio(operacion, moneda, valor, Total);
+        }, 5000);
     }
 }
 
@@ -209,7 +211,7 @@ function calcularPrestamo() {
     } else if (cuotas <= 0 || cuotas.includes(".") || cuotas.includes(",")) {
         alert("SE HAN INGRESADOS VALORES NO VÁLIDOS O FALTAN VALORES");
         document.Prestamos.Renovacion_P.value = "";
-    }else if (dinero > 1000000) {
+    } else if (dinero > 1000000) {
         alert("USTED NO PUEDE PEDIR MÁS DE $1.000.000");
         document.Prestamos.Inversion_P.value = "";
     } else if (cuotas > 100) {
@@ -233,7 +235,10 @@ function calcularPrestamo() {
         }
         document.getElementById("Total_P").value = Total.toFixed(2);
         document.getElementById("Cuotas_P").value = valor_Cuotas.toFixed(2);
-        comprobante(dinero, fecha, cuotas, valor_Cuotas, Total);
+
+        setTimeout(function () {
+            comprobante(dinero, fecha, cuotas, valor_Cuotas, Total);
+        }, 5000);
     }
 }
 
