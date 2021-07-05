@@ -167,7 +167,9 @@ function calcularPlazoFijo() {
             var dd = Number(arrDinero[x - 1])
             arrDinero[x] = dd + Number(Total_Mensual);
         }
-        crearGrafico(arrMonth, arrDinero);
+        setTimeout(function () {
+            crearGrafico(arrMonth, arrDinero);
+        }, 5000);
     }
 }
 
