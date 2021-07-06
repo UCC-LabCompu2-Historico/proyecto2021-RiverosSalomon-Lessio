@@ -142,18 +142,18 @@ function calcularPlazoFijo() {
     } else if (dinero > 0 && renovacion > 0 && dinero <= 1000000 && renovacion <= 50) {
         document.getElementById("Total_PF").value = Total.toFixed(2);
         document.getElementById("Ganancias_PF").value = ganancia.toFixed(2);
-        var currentdate = new Date();
+        var Actual = new Date();
         var arrDate = [];
-        var init = currentdate.getMonth() + 1;
-        arrDate.push(init);
+        var inicio = Actual.getMonth() + 1;
+        arrDate.push(inicio);
         for (var i = 1; i <= renovacion; i++) {
-            if (init < 12) {
-                arrDate[i] = init + 1;
-                init++;
+            if (inicio < 12) {
+                arrDate[i] = inicio + 1;
+                inicio++;
             } else {
-                init = 0;
-                arrDate[i] = init + 1;
-                init++;
+                inicio = 0;
+                arrDate[i] = inicio + 1;
+                inicio++;
             }
         }
         var mlist = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
@@ -164,8 +164,7 @@ function calcularPlazoFijo() {
         var arrDinero = [];
         arrDinero.push(dinero);
         for (var x = 1; x <= renovacion; x++) {
-            var dd = Number(arrDinero[x - 1])
-            arrDinero[x] = dd + Number(Total_Mensual);
+            arrDinero[x] = Number(arrDinero[x - 1]) + Number(Total_Mensual);
         }
         setTimeout(function () {
             crearGrafico(arrMonth, arrDinero);
